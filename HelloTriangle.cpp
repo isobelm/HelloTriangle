@@ -141,7 +141,6 @@ GLuint generateObjectBuffer(GLfloat vertices[], GLfloat colors[], GLuint numVert
 
 void linkCurrentBuffertoShader(GLuint shaderProgramID, GLuint numVertices)
 {
-    // GLuint numVertices = 3;
     // find the location of the variables that we will be using in the shader program
     GLuint positionID = glGetAttribLocation(shaderProgramID, "vPosition");
     GLuint colorID = glGetAttribLocation(shaderProgramID, "vColor");
@@ -159,7 +158,6 @@ void display()
 {
 
     glClear(GL_COLOR_BUFFER_BIT);
-    // glEnableVertexAttribArray(0);
     // NB: Make the call to draw the geometry in the currently activated vertex buffer. This is where the GPU starts to work!
     glBindVertexArray(vao1);
     glUseProgram(shaderProgramID1);
@@ -193,7 +191,6 @@ void init()
 
 int main(int argc, char **argv)
 {
-    // cout << "test";
     // Set up the window
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_3_2_CORE_PROFILE | GLUT_DOUBLE | GLUT_RGB);
